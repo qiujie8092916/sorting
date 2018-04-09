@@ -1,2 +1,2 @@
-# sorting
-sorting algorithm summary
+# 排序算法
+涵盖冒泡、选择、插入、希尔、快速、堆、归并等七大经典排序算法的js实现
