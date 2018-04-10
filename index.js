@@ -71,7 +71,7 @@ function Sort(_arr) {
       arr[j] = target
     }
   }
-   /** 插入排序
+   /** 希尔排序
        平均时间复杂度O(nlogn)
     **/
   this.shellSort = function() {
