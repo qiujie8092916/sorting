@@ -21,7 +21,10 @@ function Sort(_arr) {
   this.getArr = function() {
     return this.arr
   }
-  this.bubbleSort = function () { // 冒泡排序
+   /** 冒泡排序
+       平均时间复杂度O(n^2)
+    **/
+  this.bubbleSort = function () {
     for(let i = 0; i < arr.length; i++) {
       for(let j = 1; j < arr.length - i; j++) {
         this.cycleCount++
@@ -32,7 +35,10 @@ function Sort(_arr) {
       }
     }
   }
-  this.selectionSort = function() { // 选择排序
+   /** 选择排序
+       平均时间复杂度O(n^2)
+    **/
+  this.selectionSort = function() {
     for(let i = 0; i < arr.length; i++) {
       let minIndex = i
       for(let j = i; j < arr.length; j++) {
@@ -45,7 +51,10 @@ function Sort(_arr) {
       [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]
     }
   }
-  this.insertionSort = function() { // 插入排序
+   /** 插入排序
+       平均时间复杂度O(n^2)
+    **/
+  this.insertionSort = function() {
     for(let i = 1; i < arr.length; i++) {
       let target = arr[i]
       let j = i
@@ -62,7 +71,10 @@ function Sort(_arr) {
       arr[j] = target
     }
   }
-  this.shellSort = function() { // 希尔排序
+   /** 插入排序
+       平均时间复杂度O(nlogn)
+    **/
+  this.shellSort = function() {
     for(let gap = floor(arr.length / 2); gap > 0; gap = floor(gap / 2)) {
       for(let i = gap; i < arr.length; i++) {
         for(let j = i; j > 0; j -= gap) {
@@ -77,7 +89,10 @@ function Sort(_arr) {
       }
     }
   }
-  this.quickSort = function() { // 快速排序
+   /** 快速排序
+       平均时间复杂度O(nlogn)
+    **/
+  this.quickSort = function() {
     function adjustArray(arr, i, j) {
       if(i >= j) return
       let base = arr[i]
@@ -106,7 +121,10 @@ function Sort(_arr) {
     }
     qs.call(this, arr, 0, arr.length - 1)
   }
-  this.heapSort = function() { // 堆排序
+   /** 堆排序
+       平均时间复杂度O(nlogn)
+    **/
+  this.heapSort = function() {
     function buildMaxHeap(arr, p, len) {
       this.cycleCount++
       let childNode = 2 * p + 1
@@ -129,7 +147,10 @@ function Sort(_arr) {
       parentNode.call(this, arr, len--)
     }
   }
-  this.mergeSort = function() { // 归并排序
+   /** 归并排序
+       平均时间复杂度O(nlogn)
+    **/
+  this.mergeSort = function() {
     function divide(arr, start, last) {
       if(start < last) {
         let mid = floor((start + last) / 2)
